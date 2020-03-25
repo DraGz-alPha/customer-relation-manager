@@ -7,4 +7,7 @@ class CustomersController < ApplicationController
     @customers = Customer.order(:full_name)
   end
 
+  def missing_email
+    @customers = Customer.where(email: "")
+  end
 end

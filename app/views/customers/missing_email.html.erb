@@ -1,0 +1,7 @@
+<h1 class="title is-2">Customers With Missing Email</h1>
+<div class="columns is-multiline">
+  <% @customers.each do |customer| %>
+    <%= render partial: 'customer',
+              object: customer %>
+  <% end %>
+</div>
